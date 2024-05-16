@@ -46,12 +46,17 @@ header nav {
 
 .submenu {
   position: absolute;
-  top: 48px;
+  top: 43px;
   left: 0;
   width: 100%;
+  padding-top: 30px;
 
   /* 제이쿼리 동작을 만들기위한 준비 */
   display: none;
+}
+
+.gnb > li {
+  position: relative;
 }
 .submenu li a {
   display: block;
@@ -62,8 +67,8 @@ header nav {
   color: #fff;
 }
 
-.gnb > li {
-  position: relative;
+.gnb > li.on {
+  background: skyblue;
 }
 
 .inner {
