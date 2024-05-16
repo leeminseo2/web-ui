@@ -38,10 +38,32 @@ header nav {
   z-index: 10;
 }
 
-.gnb li a {
+.gnb > li > a {
   border: 1px solid #fff;
   display: block;
   padding: 10px 40px;
+}
+
+.submenu {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+
+  /* 제이쿼리 동작을 만들기위한 준비 */
+  display: none;
+}
+.submenu li a {
+  display: block;
+  border: 1px solid #ff0;
+  padding: 1rem;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+.gnb > li {
+  position: relative;
 }
 
 .inner {
