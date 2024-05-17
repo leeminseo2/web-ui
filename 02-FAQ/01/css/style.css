@@ -13,7 +13,6 @@ li {
 .faq-wrap {
   width: 80%;
   margin: 50px auto;
-  background: #ff5;
 }
 .faq-wrap > ul > li {
   border: 1px solid #000;
@@ -21,7 +20,6 @@ li {
   margin: 10px 0;
 }
 .faq-wrap > ul > li > strong {
-  background: #5f5;
   font-size: 1.2rem;
   display: flex;
   gap: 20px;
@@ -47,6 +45,7 @@ li {
   right: 0;
   top: 50%;
   transform: translateY(-50%) rotate(135deg);
+  transition: 0.3s;
 }
 
 .answer-wrap {
@@ -55,4 +54,12 @@ li {
   margin-top: 20px;
 
   display: none;
+}
+.faq-wrap > ul > li.on > strong {
+  color: #f00;
+}
+.faq-wrap > ul > li.on > strong::after {
+  border-color: #f00;
+  transform: translateY(-50%) rotate(315deg);
+  /* //위치값 변경 안하더라도 전부 블러옴 */
 }
