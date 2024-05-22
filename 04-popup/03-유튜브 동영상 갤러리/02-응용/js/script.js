@@ -56,6 +56,8 @@ $(function () {
     $dim.fadeOut();
     $videoWrap.removeClass('active');
     // vedio의 src값을 뺴자>동영상 삭제
-    $video.attr('src', '');
+    setTimeout(function () {
+      $video.attr('src', '');
+    }, 300);
   });
 });
