@@ -77,4 +77,9 @@ img {
   background: #fff;
   text-align: center;
   padding: 10px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap; /* 무조건 한줄 표시 */
+  text-overflow: ellipsis;
+  /* 말줄임 표시라능 */
 }
