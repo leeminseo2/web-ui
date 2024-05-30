@@ -16,7 +16,7 @@
     a,
     a:hover,
     body {
-      /* 진짜 커서 지우기 */
+      /* cun : 진짜 커서 지우기 */
       cursor: none;
     }
 
@@ -36,47 +36,51 @@
       width: 33px;
       height: 33px;
       background: url(./images/hover-2.png) no-repeat 0 0;
-      /* 마우스에 걸리적 거리지 말것  */
+
+      /* 마우스에 걸리적 거리지 말 것! */
       pointer-events: none;
       user-select: none;
     }
 
     .cursor.click {
-      background-position: -33px 0 0;
+      background-position: -33px 0;
     }
   </style>
-
   <script src="./js/jquery-3.3.1.min.js"></script>
   <script>
     $(function () {
-      // event : mouseover
+      // event : mousemove
       // 대상을 변수에 저장
-      const $window = $(window)
-      const $cursor = $('.cursor')
+      const $window = $(window);
+      const $cursor = $('.cursor');
 
-      // 브라우저에서 마우스가 움직일때
+      // 브라우저 창에서 마우스가 움직일 때
       $window.on('mousemove', function (e) {
-        console.log(e)
+        console.log(e);
 
-        const mouseX = e.pageX
-        const mouseY = e.pageY
-        // 가짜 마우스의 left,top값으로 적용
+        // 마우스의 x, y좌표값을 받아서
+        const mouseX = e.pageX;
+        const mouseY = e.pageY;
+
+        // 가짜 마우스의 left, top 값으로 적용
         $cursor.css({
           left: mouseX,
           top: mouseY
-        })
-      })
+        });
+      });
 
-      // event:mousedown, mouse up -->마우스를 클릭
+      // event : mousedown, mouseup
+      // 마우스를 누르면 click클래스 부여, 
       $window.on('mousedown', function () {
-        $cursor.addClass('click')
-      })
+        $cursor.addClass('click');
+      });
+
+      // 떼면 click클래스 삭제
       $window.on('mouseup', function () {
-        $cursor.removeClass('click')
-      })
+        $cursor.removeClass('click');
+      });
     })
   </script>
-
 
 </head>
 
