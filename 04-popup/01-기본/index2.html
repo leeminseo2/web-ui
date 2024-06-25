@@ -89,6 +89,47 @@
     <p>팝업내용</p>
     <button class="btn-close" type="button">닫기</button>
   </div>
+  <!DOCTYPE html>
+  <html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 팝업</title>
+    <style>
+      /* 스타일링을 원하는 경우 여기에 추가 */
+      /* 예시: 팝업 창 배경색, 폰트 크기, 위치 등 */
+    </style>
+  </head>
+
+  <body>
+    <!-- 검색 버튼 -->
+    <button id="searchButton">검색</button>
+
+    <!-- 팝업 창 -->
+    <div id="searchPopup" style="display: none;">
+      <!-- 팝업 내용 -->
+      <input type="text" placeholder="검색어를 입력하세요">
+      <button id="closePopup">닫기</button>
+    </div>
+
+    <script>
+      // 검색 버튼 클릭 시 팝업 표시
+      const searchButton = document.getElementById('searchButton');
+      const searchPopup = document.getElementById('searchPopup');
+      searchButton.addEventListener('click', () => {
+        searchPopup.style.display = 'block';
+      });
+
+      // 팝업 닫기 버튼 클릭 시 팝업 숨김
+      const closePopup = document.getElementById('closePopup');
+      closePopup.addEventListener('click', () => {
+        searchPopup.style.display = 'none';
+      });
+    </script>
+  </body>
+
+  </html>
 
   <div class="wrap">
     <p>
